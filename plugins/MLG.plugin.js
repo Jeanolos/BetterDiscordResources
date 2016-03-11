@@ -150,7 +150,7 @@ function doMark(evt) {
 
 function doHorn(evt){
     hornAudio = new Audio();
-    hornAudio.src = hitmarker_ogg;
+    hornAudio.src = airhorn_mp3;
     document.body.appendChild(hornAudio);
     hornAudio.play();
     intensifyScrolling();
