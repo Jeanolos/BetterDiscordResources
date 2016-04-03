@@ -7,7 +7,7 @@ EmoteMods.prototype.getDescription = function() {
     return "Adds more emote mods!";
 };
 EmoteMods.prototype.getVersion = function() {
-    return "1.0";
+    return "1.1";
 };
 EmoteMods.prototype.getAuthor = function() {
     return "TeamGameRevolution";
