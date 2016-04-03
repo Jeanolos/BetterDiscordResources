@@ -94,9 +94,11 @@ EmoteMods.prototype.start = function() {
                     userEmoteCss = true;
                     sWord = word.split(":")[0];
                     if (settingsCookie["bda-es-8"]) {
-                        emoteClass = "emote" + word.split(":")[1];
-                        if (allowedClasses.indexOf(emoteClass) < 0) {
-                            emoteClass = "";
+                        for (var i = 0; i < word.split(":")[1].split(",").length; i++) {
+                            emoteClass = emoteClass + "emote" + word.split(":")[1].split(",")[i] + " ";
+                            if (allowedClasses.indexOf("emote" + word.split(":")[1].split(",")[i]) < 0) {
+                                emoteClass = "";
+                            }
                         }
                     }
                 }
@@ -168,7 +170,7 @@ EmoteMods.prototype.start = function() {
 
     };
 
-    BdApi.injectCSS('emotemodsplugin', '.emoterainbow { animation: colorchange infinite 1s; -webkit-animation: colorchange infinite 1s; } @keyframes colorchange { 0% {-webkit-filter: none;} 25% {-webkit-filter: hue-rotate(90deg);} 50% {-webkit-filter: hue-rotate(180deg);} 75% {-webkit-filter: hue-rotate(270deg);} 100% {-webkit-filter: hue-rotate(360deg);} } @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */ { 0% {-webkit-filter: none;} 25% {-webkit-filter: hue-rotate(90deg);} 50% {-webkit-filter: hue-rotate(180deg);} 75% {-webkit-filter: hue-rotate(270deg);} 100% {-webkit-filter: hue-rotate(360deg);} }')
+    BdApi.injectCSS('emotemodsplugin', '.emoterainbow { animation: colorchange infinite 1s; -webkit-animation: colorchange infinite 1s; } @keyframes colorchange { 0% {-webkit-filter: sepia(100%);} 25% {-webkit-filter: sepia(100%) hue-rotate(90deg);} 50% {-webkit-filter: sepia(100%) hue-rotate(180deg);} 75% {-webkit-filter: sepia(100%) hue-rotate(270deg);} 100% {-webkit-filter: sepia(100%) hue-rotate(360deg);} } @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */ { 0% {-webkit-filter: sepia(100%);} 25% {-webkit-filter: sepia(100%) hue-rotate(90deg);} 50% {-webkit-filter: sepia(100%) hue-rotate(180deg);} 75% {-webkit-filter: sepia(100%) hue-rotate(270deg);} 100% {-webkit-filter: sepia(100%) hue-rotate(360deg);} }');
 };
 
 EmoteMods.prototype.stop = function() {
