@@ -7,7 +7,7 @@ EmoteMods.prototype.getDescription = function() {
     return "Adds more emote mods!";
 };
 EmoteMods.prototype.getVersion = function() {
-    return "1.1";
+    return "1.0";
 };
 EmoteMods.prototype.getAuthor = function() {
     return "TeamGameRevolution";
@@ -89,7 +89,7 @@ EmoteMods.prototype.start = function() {
                 var useEmoteCss = false;
                 var sWord = word;
                 var emoteClass = "";
-                var allowedClasses = ["emoteflip", "emotespin", "emotepulse", "emotespinflip", "emotespin2", "emotespin3", "emoterainbow"];
+                var allowedClasses = ["emoteflip", "emotespin", "emotepulse", "emotespin2", "emotespin3", "emote1spin", "emote2spin", "emote3spin", "emotetr", "emotebl", "emotebr", "emoteshake", "emoteshake2", "emoteshake3", "emoteflap", "emoterainbow"];
                 if (word.indexOf(":") > -1) {
                     userEmoteCss = true;
                     sWord = word.split(":")[0];
@@ -238,7 +238,7 @@ EmoteMods.prototype.stop = function() {
                 var useEmoteCss = false;
                 var sWord = word;
                 var emoteClass = "";
-                var allowedClasses = ["emoteflip", "emotespin", "emotepulse", "emotespinflip", "emotespin2", "emotespin3"];
+                var allowedClasses = ["emoteflip", "emotespin", "emotepulse", "emotespin2", "emotespin3", "emote1spin", "emote2spin", "emote3spin", "emotetr", "emotebl", "emotebr", "emoteshake", "emoteshake2", "emoteshake3", "emoteflap"];
                 if (word.indexOf(":") > -1) {
                     userEmoteCss = true;
                     sWord = word.split(":")[0];
